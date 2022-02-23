@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Momentum</title>
+  </head>
+  <body>
+    <header>
+      <img src="assets/trash-icon.svg" />
+      <div>SomethingElse</div>
+    </header>
+
+    <div class="container">
+      <div class="user-input-container">
+        <div class="name-container">
+          <div>What is your name?</div>
+          <input type="text" id="name" autofocus />
+        </div>
+
+        <div class="email-container">
+          <div>What is your email?</div>
+          <input type="email" id="email" />
+        </div>
+      </div>
+
+      <div class="main-content-container">
+        <div class="time-container">Time</div>
+        <div class="greetings-container">
+          <span class="greeting-item greeting-time-text"> Good afternoon, </span>
+          <span
+            id="nameInput"
+            class="adjusting-input active-input greeting-item"
+            contenteditable="true"
+            spellcheck="false"
+          ></span>
+          <span class="greeting-item">.</span>
+        </div>
+        <div class="focus-container">
+          <div id="mainFocusText">What is your main focus for today?</div>
+          <select for="focus" id="focusSelection"></select>
+        </div>
+      </div>
+      <div class="quote-container">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+    </div>
+
+    <footer>
+      <div></div>
+      <div class="todo-container">
+        <div id="todoButton">Todo</div>
+        <div class="todo-items">
+          <select for="todo-titles"></select>
+          <div class="todo-lists">
+            <ul></ul>
+            <input id="newInput" type="text" placeholder="New Todo" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

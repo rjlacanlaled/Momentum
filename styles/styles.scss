@@ -1,0 +1,26 @@
+@import './sections/header';
+@import './sections/footer';
+@import './sections/main';
+
+
+:root {
+    --mainFontColor: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    color: var(--mainFontColor);
+
+    li {
+        list-style: none;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}

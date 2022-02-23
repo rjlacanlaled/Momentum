@@ -1,0 +1,316 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+}
+
+footer .todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+footer .todo-container .todo-items {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  bottom: 3.5rem;
+  padding: 10px;
+  width: 300px;
+  max-width: 300px;
+  max-height: 0px;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+footer .todo-container .todo-items input,
+footer .todo-container .todo-items select {
+  background-color: transparent;
+  outline: none;
+  border-style: none;
+}
+
+footer .todo-container .todo-items select {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 900;
+  max-width: 300px;
+  overflow-x: hidden;
+  padding-left: 5px;
+  margin-bottom: 15px;
+  text-align: start;
+}
+
+footer .todo-container .todo-items ul > li,
+footer .todo-container .todo-items .not-todo {
+  display: none;
+}
+
+footer .todo-container .todo-items ul {
+  max-height: 300px;
+  width: 100%;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+
+footer .todo-container .todo-items ul > .todo-item-shown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+footer .todo-container .todo-items ul > .todo-item-shown input {
+  -webkit-box-flex: 0.1;
+      -ms-flex: 0.1;
+          flex: 0.1;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+footer .todo-container .todo-items ul > .todo-item-shown label {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+}
+
+footer .todo-container .todo-items ul > .todo-item-shown .fa {
+  visibility: hidden;
+  cursor: pointer;
+  -webkit-box-flex: 0.1;
+      -ms-flex: 0.1;
+          flex: 0.1;
+}
+
+footer .todo-container .todo-items .todo-item-shown:hover .fa {
+  visibility: visible;
+}
+
+footer .todo-container .todo-items ul > li > input {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 3px;
+}
+
+footer .todo-container .todo-items ul > li > label {
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+
+footer .todo-container .todo-items ul > li > .todo-done {
+  text-decoration: line-through;
+}
+
+footer .todo-container .todo-items ul > li {
+  width: 100%;
+  overflow-wrap: break-word;
+  padding-left: 10px;
+}
+
+footer .todo-container .todo-items.todo-active {
+  max-height: 500px;
+}
+
+footer .todo-container .todo-items #newInput {
+  padding-left: 10px;
+}
+
+footer .todo-container #todoButton {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container .main-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 100%;
+  margin-bottom: 120px;
+}
+
+.container span:-moz-read-write:focus {
+  outline: none;
+  border-bottom: 1px solid gray;
+}
+
+.container span:read-write:focus {
+  outline: none;
+  border-bottom: 1px solid gray;
+}
+
+.container input,
+.container select {
+  border-style: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+.container input:focus,
+.container .name-container > input,
+.container .email-container > input {
+  outline: none;
+  border-bottom: 1px solid gray;
+}
+
+.container .list-done {
+  text-decoration: line-through;
+}
+
+.container select {
+  min-width: 500px;
+  -webkit-appearance: none;
+  border-bottom: 1px solid gray;
+}
+
+.container select:hover {
+  outline: none;
+  -webkit-appearance: menulist-button;
+}
+
+.container select:focus {
+  outline: none;
+}
+
+.container .time-container,
+.container .greetings-container,
+.container .focus-container,
+.container .quote-container,
+.container .email-container {
+  display: none;
+  text-align: center;
+}
+
+.container .user-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.container .user-input-container input,
+.container .user-input-container div {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.container .time-container {
+  font-size: 1050%;
+  letter-spacing: -5px;
+  font-weight: 500;
+}
+
+.container .focus-container,
+.container select {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.container .greetings-container,
+.container .greetings-container > input {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.container .quote-container {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+:root {
+  --mainFontColor: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: var(--mainFontColor);
+}
+
+* li {
+  list-style: none;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=styles.css.map */

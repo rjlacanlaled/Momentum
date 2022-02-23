@@ -1,0 +1,128 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+
+  width: 100%;
+
+  background-color: transparent;
+  padding: 20px;
+
+  .todo-container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .todo-items {
+      display: none;
+
+      position: absolute;
+      right: 1rem;
+      bottom: 3.5rem;
+      padding: 10px;
+
+      width: 300px;
+      max-width: 300px;
+      max-height: 0px;
+
+      background-color: black;
+      opacity: 0.7;
+      border-radius: 10px;
+
+
+      input,
+      select {
+        background-color: transparent;
+        outline: none;
+        border-style: none;
+      }
+
+      select {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 900;
+        max-width: 300px;
+        overflow-x: hidden;
+
+        padding-left: 5px;
+        margin-bottom: 15px;
+        text-align: start;
+      }
+
+      ul > li,
+      .not-todo {
+        display: none;
+      }
+
+      ul {
+        max-height: 300px;
+        width: 100%;
+        overflow-y: scroll;
+        margin-bottom: 10px;
+      }
+
+      ul > .todo-item-shown {
+        display: flex;
+        gap: 5px;
+        justify-content: flex-start;
+
+        input {
+            flex: 0.1;
+            align-self: flex-start;
+        }
+
+        label {
+            flex: 0.8;
+        }
+
+        .fa {
+            visibility: hidden;
+            cursor: pointer;
+            flex: 0.1;
+        }
+
+      }
+
+      .todo-item-shown:hover {
+          .fa{
+              visibility: visible;
+          }
+      }
+
+      ul > li > input {
+        align-self: flex-start;
+        margin-top: 3px;
+      }
+
+      ul > li > label {
+        overflow-x: hidden;
+        overflow-wrap: break-word;
+      }
+
+      ul > li > .todo-done {
+        text-decoration: line-through;
+      }
+
+      ul > li {
+        width: 100%;
+        overflow-wrap: break-word;
+        padding-left: 10px;
+      }
+
+      &.todo-active {
+        max-height: 500px;
+      }
+
+      #newInput {
+        padding-left: 10px;
+      }
+    }
+
+    #todoButton {
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+  }
+}
