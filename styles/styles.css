@@ -150,6 +150,7 @@ footer .todo-container .todo-items #newInput {
 }
 
 footer .todo-container #todoButton {
+  visibility: hidden;
   font-size: 1.3rem;
   cursor: pointer;
 }
@@ -221,6 +222,7 @@ footer .todo-container #todoButton {
   border-style: none;
   background-color: transparent;
   text-align: center;
+  min-width: 500px;
 }
 
 .container input:focus,
@@ -228,6 +230,10 @@ footer .todo-container #todoButton {
 .container .email-container > input {
   outline: none;
   border-bottom: 1px solid gray;
+}
+
+.container .name-container {
+  display: none;
 }
 
 .container .list-done {
@@ -272,12 +278,15 @@ footer .todo-container #todoButton {
   height: 100%;
 }
 
-.container .user-input-container input,
 .container .user-input-container div {
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 600;
   width: 100%;
+}
+
+.container .user-input-container input {
+  font-size: 2.5rem;
 }
 
 .container .time-container {
@@ -371,9 +380,11 @@ footer .todo-container #todoButton {
 }
 
 @media (max-height: 500px) {
-  .container .user-input-container input,
   .container .user-input-container div {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  .container .user-input-container input {
+    font-size: 1.5rem;
   }
   .container .main-content-container .greetings-container {
     font-size: 2rem;

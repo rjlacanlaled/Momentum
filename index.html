@@ -25,12 +25,12 @@
       <div class="user-input-container">
         <div class="name-container">
           <div>What is your name?</div>
-          <input type="text" id="name" autofocus />
+          <input type="text" id="name" autocomplete="off" spellcheck="false" autofocus />
         </div>
 
         <div class="email-container">
           <div>What is your email?</div>
-          <input type="email" id="email" />
+          <input type="email" id="email" autocomplete="off" autofocus/>
         </div>
       </div>
 
@@ -58,8 +58,8 @@
         </div>
         <div class="quote-inputs">
             <form>
-                <input type="text" placeholder="Enter Quote" id="quoteId" required/>
-                <input type="text" placeholder="Enter Author" id="quoteAuthorId" required />
+                <input type="text" placeholder="Enter Quote" id="quoteId" autocomplete="off" required/>
+                <input type="text" placeholder="Enter Author" id="quoteAuthorId" autocomplete="off" required />
                 <button type="submit">add</button>
             </form>
         </div>
@@ -74,7 +74,7 @@
           <select for="todo-titles"></select>
           <div class="todo-lists">
             <ul></ul>
-            <input id="newInput" type="text" placeholder="New Todo" />
+            <input id="newInput" type="text" placeholder="New Todo" autocomplete="off" />
           </div>
         </div>
       </div>

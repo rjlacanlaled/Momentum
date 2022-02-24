@@ -6,12 +6,16 @@ import initFocus from "./modules/controller/focus.js";
 import initTodo, { todoListApp } from "./modules/controller/todo.js";
 import initBackground from "./modules/controller/background.js";
 
-user.name = "rj";
-user.email = "rjlacanlaled@gmail.com";
+let waitForRegistration;
 
-initBackground();
-initRegistration();
-const waitForRegistration = setInterval(initApp, 250);
+window.onload = init;
+
+function init() {
+  console.log('init');
+  initBackground();
+  initRegistration();
+  waitForRegistration = setInterval(initApp, 250);
+}
 
 function initApp() {
   if (!user.name || !user.email) return;

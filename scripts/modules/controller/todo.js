@@ -39,6 +39,7 @@ export default function initTodo() {
   todoSelection.addEventListener("input", todoSelectionChangeHandler);
 
   updateTodoListSelection();
+  todoButton.style.visibility = 'visible';
   todoSelection.dispatchEvent(new Event("input"));
 
   // Event handlers
