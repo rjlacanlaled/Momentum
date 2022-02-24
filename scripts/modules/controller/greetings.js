@@ -19,13 +19,27 @@ export default function initGreetings(user) {
   updateDisplay(greetingsContainer, "block");
 
   function updateName(newName) {
-    console.log(newName);
     if (newName.length < 1) {
       nameContainer.textContent = user.name;
     } else {
       user.name = newName;
     }
     nameContainer.blur();
+  }
+
+  function getCorrectGreeting() {
+    const hr = timeInterval.date.getHours();
+    let greetingTimeText = '';
+
+    if (hr >= 3 && hr < 12) {
+      greetingTimeText = 'morning';
+    } else if (hr >= 12 && hr < 18) {
+      greetingTimeText = 'afternoon';
+    } else {
+      greetingTimeText = 'evening';
+    }
+
+    return greetingTimeText;
   }
   // Event handlers
 
@@ -44,17 +58,9 @@ export default function initGreetings(user) {
 
   function hourChangeHandler(event) {
 
-    const hr = timeInterval.date.getHours();
-    let greetingTimeText = '';
 
-    if (hr >= 3 && hr < 12) {
-      greetingTimeText = 'morning';
-    } else if (hr >= 12 && hr < 6) {
-      greetingTimeText = 'afternoon';
-    } else {
-      greetingTimeText = 'evening';
-    }
-
-    event.target.textContent = `Good ${greetingTimeText},`;
+    event.target.textContent = `Good ${getCorrectGreeting()},`;
   }
+
+  
 }

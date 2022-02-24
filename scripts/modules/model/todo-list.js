@@ -3,7 +3,7 @@ let ID = 0;
 export default class TodoList {
   constructor(name, list = []) {
     this.id = ++ID;
-    this.name = name.toUpperCase();
+    this.name = name.toLowerCase();
     this.list = list;
   }
 

@@ -45,7 +45,7 @@ export default function initTodo() {
 
   function newInputEnterKeyHandler(event) {
     if (event.key !== "Enter") return;
-    if (!event.target.value) return;
+    if (!event.target.value.trim()) return;
     todoSelection.value === addNewTodoListId
       ? addNewList(event.target.value)
       : addNewTodo(event.target.value);

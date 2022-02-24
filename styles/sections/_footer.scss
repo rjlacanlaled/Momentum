@@ -4,7 +4,6 @@ footer {
 
   position: fixed;
   bottom: 0;
-  z-index: 1;
 
   width: 100%;
 
@@ -22,6 +21,7 @@ footer {
       right: 1rem;
       bottom: 3.5rem;
       padding: 10px;
+      z-index: 200;
 
       width: 300px;
       max-width: 300px;
@@ -30,7 +30,6 @@ footer {
       background-color: black;
       opacity: 0.7;
       border-radius: 10px;
-
 
       input,
       select {
@@ -49,6 +48,7 @@ footer {
         padding-left: 5px;
         margin-bottom: 15px;
         text-align: start;
+        text-transform: capitalize;
       }
 
       ul > li,
@@ -69,26 +69,25 @@ footer {
         justify-content: flex-start;
 
         input {
-            flex: 0.1;
-            align-self: flex-start;
+          flex: 0.1;
+          align-self: flex-start;
         }
 
         label {
-            flex: 0.8;
+          flex: 0.8;
         }
 
         .fa {
-            visibility: hidden;
-            cursor: pointer;
-            flex: 0.1;
+          visibility: hidden;
+          cursor: pointer;
+          flex: 0.1;
         }
-
       }
 
       .todo-item-shown:hover {
-          .fa{
-              visibility: visible;
-          }
+        .fa {
+          visibility: visible;
+        }
       }
 
       ul > li > input {
@@ -99,6 +98,7 @@ footer {
       ul > li > label {
         overflow-x: hidden;
         overflow-wrap: break-word;
+        text-transform: capitalize;
       }
 
       ul > li > .todo-done {
@@ -125,4 +125,25 @@ footer {
       cursor: pointer;
     }
   }
+}
+
+@media (max-height:500px), (max-width:500px) {
+    footer {
+        .todo-container {
+          #todoButton {
+            font-size: 0.8rem;
+          }
+    
+          .todo-items {
+              max-width: 200px;
+    
+              ul {
+                  max-height: 150px;
+              }
+            select {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
 }

@@ -20,14 +20,13 @@ export default function initFocus(todoListApp) {
     todoListAppDataChangeHandler
   );
 
-  updateDisplay(focusContainer, "block");
+  updateDisplay(focusContainer, "flex");
   updateFocusSelectionOptions();
   focusSelection.addEventListener("input", inputChangeHandler);
 
   // Event Handlers
 
   function inputChangeHandler(event) {
-      console.log('here first');
     if (event.target.value == "empty") {
       updateDisplay(mainFocusText, "block");
     } else {
@@ -72,7 +71,6 @@ export default function initFocus(todoListApp) {
     resetFocusListSelectionOptions();
     if (todoListApp.todoLists.length < 1) return;
     todoListApp.todoLists.forEach((list) => {
-      console.log("here");
       const option = createOption(`${list.name}`, `listOption${list.id}`);
       focusSelection.add(option, undefined);
     });
