@@ -11,7 +11,9 @@ export default function initRegistration() {
   nameInput.addEventListener("keydown", keypressHandler);
   emailInput.addEventListener("keydown", keypressHandler);
 
-  if (user.name) updateDisplay(nameContainer, 'none');
+
+  updateDisplay(nameContainer, user.name ? 'none' : 'block');
+  nameInput.focus();
   if (user.name && !user.email) updateDisplay(emailContainer, 'block');
 
   function checkInput(input) {
@@ -19,7 +21,10 @@ export default function initRegistration() {
       if (!input.value.length) return;
       user.name = input.value;
       updateDisplay(nameContainer, "none");
-      if (!user.email) updateDisplay(emailContainer, "block");
+      if (!user.email) {
+        updateDisplay(emailContainer, "block");
+        emailInput.focus();
+      }
     } else {
       if (!isEmailValid(input.value)) return;
       user.email = input.value;

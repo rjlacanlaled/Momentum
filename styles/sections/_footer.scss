@@ -121,29 +121,30 @@ footer {
     }
 
     #todoButton {
+      visibility: hidden;
       font-size: 1.3rem;
       cursor: pointer;
     }
   }
 }
 
-@media (max-height:500px), (max-width:500px) {
-    footer {
-        .todo-container {
-          #todoButton {
-            font-size: 0.8rem;
-          }
-    
-          .todo-items {
-              max-width: 200px;
-    
-              ul {
-                  max-height: 150px;
-              }
-            select {
-              font-size: 0.8rem;
-            }
-          }
+@media (max-height: 500px), (max-width: 500px) {
+  footer {
+    .todo-container {
+      #todoButton {
+        font-size: 0.8rem;
+      }
+
+      .todo-items {
+        max-width: 200px;
+
+        ul {
+          max-height: 150px;
+        }
+        select {
+          font-size: 0.8rem;
         }
       }
+    }
+  }
 }
